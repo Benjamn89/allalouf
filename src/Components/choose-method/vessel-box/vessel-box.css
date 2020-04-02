@@ -1,0 +1,19 @@
+.vessel-box-div {
+  height: 300px;
+  width: 80%;
+  border: solid 0.5px;
+  margin: 25px auto;
+}
+
+.vessel-box-title {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 10px;
+}
+.vessel-box-res-p {
+  text-align: right;
+  margin: 30px 10px 0 0;
+}
+.next-call-p {
+  margin-top: 40px;
+}

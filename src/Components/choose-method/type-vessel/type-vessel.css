@@ -1,0 +1,10 @@
+.wrap-react-select-div {
+  width: 60%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  column-gap: 15px;
+}
+.wrap-react-select-div * {
+  cursor: pointer;
+}

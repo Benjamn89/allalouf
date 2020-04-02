@@ -1,0 +1,14 @@
+.choose-m-div {
+  display: grid;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 40px 0;
+}
+.choose-m-div p {
+  cursor: pointer;
+  transition: 0.5s;
+}
+.choose-m-div p:hover {
+  color: blueviolet;
+}

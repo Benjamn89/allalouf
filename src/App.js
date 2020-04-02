@@ -1,26 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Title from "./Components/Title/title";
+import ChooseM from "./Components/choose-method/choose-met";
 
-function App() {
+const App = props => {
+  const buttonOn = async () => {
+    fetch(
+      "https://gracious-heisenberg-38b314.netlify.com/.netlify/functions/api"
+    )
+      .then(res => {
+        return res.json();
+      })
+      .then(data => {
+        console.log(data);
+      });
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="test">
+      <Title />
+      <ChooseM />
+      <button onClick={buttonOn} className="buttonto">
+        Fetch
+      </button>
     </div>
   );
-}
+};
 
 export default App;
+
+// try {
+//   fetch(`https://je5xi.sse.codesandbox.io/query?${saveSelected.area}`)
+//     .then(res => {
+//       return res.json();
+//     })
+//     .then(data => {
+//       if (data.length > 0) {
+//         console.log(data);
+//       } else {
+//         console.log("Is less");
+//       }
+//     });
+// } catch (err) {
+//   console.error(err);
+// }
