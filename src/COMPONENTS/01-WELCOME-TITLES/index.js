@@ -10,11 +10,12 @@ class WelcomeTitles extends Component {
       <div className="welcome-title-div">
         <h1 className="welcome-title-h1">בדיקת צפי - ALLALOUF</h1>
         <div className="welcome-inside-div">
-          <button onClick={this.props.clickMode} className="typeMode">
-            הקלד שם אניה
-          </button>
           <button onClick={this.props.clickMode} className="clickMode">
             בחר אוניה מרשימה
+          </button>
+
+          <button onClick={this.props.clickMode} className="typeMode">
+            הקלד שם אניה
           </button>
         </div>
       </div>
