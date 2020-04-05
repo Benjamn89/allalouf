@@ -2,11 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Gotu", sans-serif;
 }
-.buttonto {
-  height: 50px;
-  width: 50px;
-  position: absolute;
+
+.powered-p {
+  position: fixed;
   left: 50%;
-  cursor: pointer;
+  transform: translateX(-50%);
+  top: 95%;
 }

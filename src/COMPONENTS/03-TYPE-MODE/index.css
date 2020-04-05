@@ -1,10 +1,10 @@
-.wrap-react-select-div {
-  width: 60%;
+.type-mode-div {
+  width: 70%;
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 4fr;
-  column-gap: 15px;
+  grid-gap: 5px;
 }
-.wrap-react-select-div * {
+.type-mode-btn {
   cursor: pointer;
 }

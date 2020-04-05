@@ -1,18 +1,18 @@
 const veseselNames = [
-  "Grande Mediterraneo",
-  "Grande Ellade",
+  "Asiatic Orchid",
+  "Fides",
+  "Grande Anversa",
   "Gran Bretagna",
+  "Grande Ellade",
   "Grande Europa",
   "Grande Italia",
-  "Fides",
-  "Asiatic Orchid",
-  "Pacul",
-  "Spes",
-  "Grande Anversa",
+  "Grande Mediterraneo",
   "Grande Roma",
   "Grande Spagna",
   "Grande Scandinavia",
-  "Last UFS (out of line)"
+  "Pacul",
+  "Spes",
+  "Last UFS (out of line)",
 ];
 
 export default veseselNames;

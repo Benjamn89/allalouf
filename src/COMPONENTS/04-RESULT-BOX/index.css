@@ -1,0 +1,32 @@
+.result-box-div {
+  padding-top: 50px;
+  border: solid 0.5px #fff;
+  margin-top: 20px;
+}
+.result-h1 {
+  font-size: 22px;
+  text-align: center;
+}
+.result-inside-div {
+  text-align: center;
+}
+.inside-p {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 15px;
+}
+.test {
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: auto;
+}
+.add-mar-bot {
+  margin-bottom: 15px;
+}
+.last-call-title {
+  font-weight: bold;
+  margin-left: 20px;
+  order: 1;
+}

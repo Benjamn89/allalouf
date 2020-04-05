@@ -1,0 +1,18 @@
+.welcome-title-div {
+  text-align: center;
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+.welcome-inside-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 30px;
+}
+.welcome-inside-div button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.welcome-inside-div button:hover {
+  transform: scale(1.03);
+}

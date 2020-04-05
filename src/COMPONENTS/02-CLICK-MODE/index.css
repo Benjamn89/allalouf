@@ -1,0 +1,24 @@
+.vessels-list-ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  list-style: none;
+  row-gap: 30px;
+  transition: 0.5s;
+  border: solid 0.5px #fff;
+}
+.li-list {
+  transition: 0.3s;
+  cursor: pointer;
+}
+.li-list:hover {
+  transform: scale(1.07);
+}
+
+@media only screen and (max-width: 580px) {
+  .vessels-list-ul {
+    grid-template-columns: 3fr 3fr;
+    row-gap: 15px;
+    font-size: 15px;
+  }
+}
