@@ -15,6 +15,7 @@ const reducer = (state = initialState, action) => {
       currentViewMethod: "clickMode",
     };
   }
+
   return state;
 };
 

@@ -28,6 +28,11 @@ const actionTypes = {
         });
     };
   },
+  loadSpinner: () => {
+    return {
+      type: "loadSpinner",
+    };
+  },
 };
 
 export default actionTypes;

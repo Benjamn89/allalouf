@@ -6,8 +6,6 @@
 }
 
 .powered-p {
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 95%;
+  text-align: center;
+  margin-top: 50px;
 }

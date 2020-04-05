@@ -3,6 +3,7 @@ import WelcomeTitles from "./COMPONENTS/01-WELCOME-TITLES/index";
 import TypeMode from "./COMPONENTS/03-TYPE-MODE/index";
 import ClickMode from "./COMPONENTS/02-CLICK-MODE/index";
 import ResultBox from "./COMPONENTS/04-RESULT-BOX/index";
+import Spinner from "./COMPONENTS/05-SPINNER/index";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import actionTypes from "./REDUCERS/actionTypes/actionTypes";
@@ -14,6 +15,10 @@ class App extends Component {
   };
 
   fetching = (e) => {
+    // load spinner
+    this.props.loadSpinner();
+
+    // start fetching data
     if (typeof e === "string") {
       if (e === "Last UFS (out of line)") {
         this.props.pickVessel("Lila Athens");
@@ -37,6 +42,9 @@ class App extends Component {
       } else {
         clickedMethod = <ClickMode fetching={this.fetching} />;
       }
+    }
+    if (this.props.showSpinner) {
+      showBox = <Spinner />;
     }
 
     if (this.props.showBox) {
@@ -75,12 +83,14 @@ const mapStateToProps = (state) => {
     lastSailed: state.showTheResBox.lastSailed,
     lastAgent: state.showTheResBox.lastAgent,
     lastAgentLast: state.showTheResBox.lastAgentLast,
+    showSpinner: state.showTheResBox.showSpinner,
   };
 };
 
 const mapDispatchToProps = (dispacth) => {
   return {
     changeMoge: (mode) => dispacth(actionTypes.typeMode(mode)),
+    loadSpinner: () => dispacth(actionTypes.loadSpinner()),
     pickVessel: (vesselName) => dispacth(actionTypes.pickVessel(vesselName)),
   };
 };

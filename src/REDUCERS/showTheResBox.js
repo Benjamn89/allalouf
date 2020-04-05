@@ -7,6 +7,7 @@ const initialState = {
   lastSailed: null,
   lastAgent: null,
   lastAgentLast: null,
+  showSpinner: false,
 };
 
 const reducer = (state = initialState, action) => {
@@ -21,6 +22,15 @@ const reducer = (state = initialState, action) => {
       lastSailed: action.lastSailed,
       lastAgent: action.lastAgent,
       lastAgentLast: action.lastAgentLast,
+      showSpinner: false,
+    };
+  }
+
+  if (action.type === "loadSpinner") {
+    return {
+      ...state,
+      showSpinner: true,
+      showBox: false,
     };
   }
 
