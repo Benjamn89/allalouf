@@ -30,7 +30,15 @@ class TypeMode extends Component {
         >
           מצא
         </button>
-        <Select onChange={this.handleChange} options={options} />
+        <Select
+          autoFocus
+          onKeyDown={(e) => {
+            this.props.enterPressed(e, choosenVessel);
+            choosenVessel = "";
+          }}
+          onChange={this.handleChange}
+          options={options}
+        />
       </div>
     );
   }

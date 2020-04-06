@@ -34,11 +34,24 @@ class App extends Component {
     }
   };
 
+  enterPressed = (e, vessel) => {
+    if (e.keyCode === 13 && vessel) {
+      // load spinner
+      this.props.loadSpinner();
+      this.props.pickVessel(vessel);
+    }
+  };
+
   render() {
     var clickedMethod, showBox;
     if (this.props.viewMode) {
       if (this.props.viewMode === "typeMode") {
-        clickedMethod = <TypeMode fetchBtn={(e, b) => this.fetching(e, b)} />;
+        clickedMethod = (
+          <TypeMode
+            enterPressed={(e, vessel) => this.enterPressed(e, vessel)}
+            fetchBtn={(e) => this.fetching(e)}
+          />
+        );
       } else {
         clickedMethod = <ClickMode fetching={this.fetching} />;
       }
