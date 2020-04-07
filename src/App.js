@@ -10,6 +10,14 @@ import actionTypes from "./REDUCERS/actionTypes/actionTypes";
 import jump from "jump.js";
 
 class App extends Component {
+  shouldComponentUpdate(nS, nP) {
+    if (nS.vesselName !== this.props.vesselName) {
+      // scroll to the box result for smart phone users
+      jump(".powered-p");
+    }
+    return true;
+  }
+
   changeMoge = (e) => {
     var mode = e.target.className;
     this.props.changeMoge(mode);
@@ -73,8 +81,6 @@ class App extends Component {
           vesselName={this.props.vesselName}
         />
       );
-      // scroll to the box result for smart phone users
-      jump(".powered-p");
     }
 
     return (
