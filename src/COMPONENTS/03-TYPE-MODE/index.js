@@ -10,7 +10,7 @@ var options = vessels.map((el) => {
   };
 });
 
-var choosenVessel;
+var choosenVessel = false;
 
 class TypeMode extends Component {
   shouldComponentUpdate() {
@@ -21,13 +21,16 @@ class TypeMode extends Component {
     choosenVessel = e.value;
   };
 
+  passClickProps = () => {
+    if (choosenVessel) {
+      this.props.fetchBtn(choosenVessel);
+    }
+  };
+
   render() {
     return (
       <div className="type-mode-div">
-        <button
-          onClick={() => this.props.fetchBtn(choosenVessel)}
-          className="type-mode-btn"
-        >
+        <button onClick={this.passClickProps} className="type-mode-btn">
           מצא
         </button>
         <Select

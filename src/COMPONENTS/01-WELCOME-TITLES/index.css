@@ -1,7 +1,11 @@
 .welcome-title-div {
+  padding: 20px 0;
   text-align: center;
-  margin-top: 50px;
-  padding-bottom: 50px;
+  margin-bottom: 35px;
+}
+.welcome-title-h1 {
+  font-family: "IM Fell French Canon SC", serif;
+  letter-spacing: 3px;
 }
 .welcome-inside-div {
   display: flex;
@@ -13,7 +17,7 @@
 /*  buttons  */
 .welcome-inside-div button {
   border: none;
-  background: #7f8fa6;
+  background: #7d5fff;
   color: #ffffff !important;
   padding: 12px 5px 12px 5px;
   border-radius: 6px;

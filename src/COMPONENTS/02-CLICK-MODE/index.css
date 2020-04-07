@@ -5,7 +5,9 @@
   list-style: none;
   row-gap: 30px;
   transition: 0.5s;
-  border: solid 0.5px #fff;
+  border: solid 0.5px #7d5fff;
+  border-right: none;
+  border-left: none;
 }
 .li-list {
   transition: 0.3s;

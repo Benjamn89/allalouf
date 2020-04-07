@@ -1,6 +1,10 @@
 .result-box-div {
-  padding-top: 50px;
-  border: solid 0.5px #fff;
+  border: solid 0.5px #7d5fff;
+  border-left: none;
+  border-right: none;
+  margin-top: 20px;
+  width: 300px;
+  margin: auto;
   margin-top: 20px;
 }
 .result-h1 {

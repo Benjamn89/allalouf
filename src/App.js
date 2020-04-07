@@ -80,6 +80,8 @@ class App extends Component {
         {clickedMethod}
         {showBox}
         <p className="powered-p">Powered By Binyamin Tal</p>
+
+        <div className="testdb-div"></div>
       </div>
     );
   }
