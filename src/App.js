@@ -7,6 +7,7 @@ import Spinner from "./COMPONENTS/05-SPINNER/index";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import actionTypes from "./REDUCERS/actionTypes/actionTypes";
+import jump from "jump.js";
 
 class App extends Component {
   changeMoge = (e) => {
@@ -17,6 +18,9 @@ class App extends Component {
   fetching = (e) => {
     // load spinner
     this.props.loadSpinner();
+
+    // scroll to the box result for smart phone users
+    jump(".powered-p");
 
     // start fetching data
     if (typeof e === "string") {
