@@ -30,9 +30,7 @@ class ResultBox extends Component {
           </div>
           <div className="test">
             <span className="last-call-title">סוכן מתפעל</span>
-            <span className="last-call-subtitle">
-              {this.props.lastAgent} {this.props.lastAgentLast}
-            </span>
+            <span className="last-call-subtitle">{this.props.lastAgent}</span>
           </div>
         </div>
       </div>

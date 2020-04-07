@@ -77,7 +77,6 @@ class App extends Component {
           lastStarted={this.props.lastStarted}
           lastSailed={this.props.lastSailed}
           lastAgent={this.props.lastAgent}
-          lastAgentLast={this.props.lastAgentLast}
           vesselName={this.props.vesselName}
         />
       );
@@ -106,7 +105,6 @@ const mapStateToProps = (state) => {
     lastStarted: state.showTheResBox.lastStarted,
     lastSailed: state.showTheResBox.lastSailed,
     lastAgent: state.showTheResBox.lastAgent,
-    lastAgentLast: state.showTheResBox.lastAgentLast,
     showSpinner: state.showTheResBox.showSpinner,
   };
 };

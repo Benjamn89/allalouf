@@ -1,3 +1,10 @@
+import faunadb, { query as q } from "faunadb";
+
+// make the db connection
+var client = new faunadb.Client({
+  secret: "fnADoxv533ACAo7j84iV3QGNJhUb6_Ju8C2X_Ri0",
+});
+
 const actionTypes = {
   typeMode: (mode) => {
     return {
@@ -8,22 +15,19 @@ const actionTypes = {
     return {
       type: "pickVessel",
       vesselName: vesselName,
-      eta: dataInfo[0],
-      lastArrived: dataInfo[1],
-      lastStarted: dataInfo[2],
-      lastSailed: dataInfo[3],
-      lastAgent: dataInfo[4],
-      lastAgentLast: dataInfo[5],
+      eta: dataInfo.eta,
+      lastArrived: dataInfo.arrived,
+      lastStarted: dataInfo.startOps,
+      lastSailed: dataInfo.sailed,
+      lastAgent: dataInfo.agent,
     };
   },
   pickVessel: (vesselName) => {
     return (dispatch) => {
-      fetch(`https://allalouf-65061.firebaseio.com/allalouf/${vesselName}.json`)
-        .then((res) => {
-          return res.json();
-        })
-        .then((data) => {
-          var dataInfo = data.split(" ");
+      client
+        .query(q.Get(q.Ref(q.Collection("Allalouf"), "262088790964699650")))
+        .then((ret) => {
+          var dataInfo = ret.data[vesselName];
           dispatch(actionTypes.afterFetch(dataInfo, vesselName));
         });
     };
