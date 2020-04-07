@@ -19,9 +19,6 @@ class App extends Component {
     // load spinner
     this.props.loadSpinner();
 
-    // scroll to the box result for smart phone users
-    jump(".powered-p");
-
     // start fetching data
     if (typeof e === "string") {
       if (e === "Last UFS (out of line)") {
@@ -76,6 +73,8 @@ class App extends Component {
           vesselName={this.props.vesselName}
         />
       );
+      // scroll to the box result for smart phone users
+      jump(".powered-p");
     }
 
     return (
