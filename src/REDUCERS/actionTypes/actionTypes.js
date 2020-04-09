@@ -2,7 +2,7 @@ import faunadb, { query as q } from "faunadb";
 
 // make the db connection
 var client = new faunadb.Client({
-  secret: "fnADoxv533ACAo7j84iV3QGNJhUb6_Ju8C2X_Ri0",
+  secret: process.env.REACT_APP_API_URL,
 });
 
 const actionTypes = {

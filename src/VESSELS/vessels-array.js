@@ -3,6 +3,7 @@ const veseselNames = [
   "Fides",
   "Grande Anversa",
   "Gran Bretagna",
+  "Grande Detroit",
   "Grande Ellade",
   "Grande Europa",
   "Grande Italia",
