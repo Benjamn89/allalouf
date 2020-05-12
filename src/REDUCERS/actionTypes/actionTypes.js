@@ -16,8 +16,8 @@ const actionTypes = {
       type: "pickVessel",
       vesselName: vesselName,
       eta: dataInfo.eta,
-      lastArrived: dataInfo.arrived,
-      lastStarted: dataInfo.startOps,
+      lastArrived: dataInfo.last,
+      lastStarted: dataInfo.start,
       lastSailed: dataInfo.sailed,
       lastAgent: dataInfo.agent,
     };
@@ -25,10 +25,10 @@ const actionTypes = {
   pickVessel: (vesselName) => {
     return (dispatch) => {
       client
-        .query(q.Get(q.Ref(q.Collection("Allalouf"), "262088790964699650")))
+        .query(q.Get(q.Match(q.Index("vessel"), vesselName)))
+
         .then((ret) => {
-          var dataInfo = ret.data[vesselName];
-          dispatch(actionTypes.afterFetch(dataInfo, vesselName));
+          dispatch(actionTypes.afterFetch(ret.data, vesselName));
         });
     };
   },

@@ -18,10 +18,6 @@ class App extends Component {
     return true;
   }
 
-  componentDidMount() {
-    console.log(process.env.REACT_APP_API_URL);
-  }
-
   changeMoge = (e) => {
     var mode = e.target.className;
     this.props.changeMoge(mode);

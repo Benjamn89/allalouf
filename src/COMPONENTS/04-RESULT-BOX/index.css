@@ -28,6 +28,24 @@
 }
 .add-mar-bot {
   margin-bottom: 15px;
+  position: relative;
+  cursor: pointer;
+}
+.add-mar-bot::after {
+  content: "עוד פרטים";
+  position: absolute;
+  font-size: 12px;
+  background-color: #7d5fff;
+  border-radius: 5px;
+  left: 25px;
+  bottom: 5.5px;
+  width: 20%;
+  color: white;
+  transition: transform ease-out 0.3s;
+  transform: scale(0);
+}
+.add-mar-bot:hover::after {
+  transform: scale(1);
 }
 .last-call-title {
   font-weight: bold;
